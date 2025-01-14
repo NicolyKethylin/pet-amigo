@@ -6,10 +6,10 @@ function Nav() {
  return (
   <div>
    <nav>
-    <div>
-     {location.pathname !== "/" && (<NavLink to="/">Home</NavLink>)}
-     {location.pathname !== "/cadastro" && (<NavLink to="/cadastro">Cadastre o pet</NavLink>)}
-     {location.pathname !== "/adoteumamigo" && (<NavLink to="/adoteumamigo">Adote</NavLink>
+    <div className="w-full h-24 bg-verde">
+     {location.pathname !== "/" && (<NavLink to="/" className='text-branco'>Home</NavLink>)}
+     {location.pathname !== "/cadastro" && (<NavLink to="/cadastro" className='text-branco'>Cadastre o pet</NavLink>)}
+     {location.pathname !== "/adoteumamigo" && (<NavLink to="/adoteumamigo" className='text-branco'>Adote</NavLink>
      )}
     </div>
    </nav>

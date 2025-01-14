@@ -6,7 +6,6 @@ function Nav() {
  return (
   <div>
    <nav>
-
     <div>
      {location.pathname !== "/" && (<NavLink to="/">Home</NavLink>)}
      {location.pathname !== "/cadastro" && (<NavLink to="/cadastro">Cadastre o pet</NavLink>)}

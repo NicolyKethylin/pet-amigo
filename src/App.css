@@ -16,6 +16,6 @@
   }
 
   .btn-custom {
-    @apply rounded-lg bg-verde text-branco px-4 py-1 text-sm;
+    @apply rounded-lg bg-verde text-branco px-6 py-4 text-sm;
   }
 }

@@ -18,6 +18,8 @@ function App() {
      <Route path="/" element={<Home />} />
      <Route path="/cadastro" element={<Cadastro />} />
      <Route path="/adoteumamigo" element={<Adote />} />
+
+
     </Routes>
    </div>
 

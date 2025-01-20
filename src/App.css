@@ -7,6 +7,9 @@
 @layer base {
   body {
     font-family: 'Roboto', sans-serif;
+    height: auto;
+    margin: 0;
+    background-color: #f0f0f0; 
   }
 
   input[type="number"]::-webkit-inner-spin-button,
@@ -16,30 +19,27 @@
   }
 
   .btn-custom {
-    @apply rounded-lg bg-verde text-branco px-6 py-4 text-sm;
+    @apply rounded bg-verde hover:bg-roxo text-branco px-6 py-6 text-sm w-3/12;
   }
+
+  input, select {
+  border: none;
+  outline: none;
+  
 }
 
-.modal {
- position: absolute;
- top: 50%;
- left: 50%;
- right: auto;
- bottom: auto;
- transform: translate(-50%, -50%);
- background: white;
- padding: 20px;
- border-radius: 8px;
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
- width: 80%;
- max-width: 500px;
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.overlay {
- position: fixed;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background: rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 768px) {
+  .pet-amigo {
+    display: none;
+  }
+
+}
+
+

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
- content: ["./src/**/*.{html,js}"],
+ content: ["./src/**/*.{html,js,tsx}"],
  theme: {
   colors: {
    'cinza': '#ff9344',
@@ -11,6 +11,8 @@ module.exports = {
    'cinza': '#D7D7D9',
    'branco': '#FFFFFF',
    'cinza-escuro': '#333333',
+   'roxo': '#6B5B95',
+   'verdao': '#BFFF23'
   },
   fontFamily: {
    'sans': ['ui-sans-serif', 'system-ui'],
@@ -22,7 +24,7 @@ module.exports = {
   container: {
    center: true,
   },
-  extend: {},
  },
- plugins: [],
+ plugins:
+  [],
 }

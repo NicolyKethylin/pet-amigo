@@ -8,19 +8,23 @@ import './App.css';
 import Home from './pages/Home.js';
 import Adote from './pages/Adote.js';
 import Cadastro from './pages/Cadastro.js';
+import Rodape from './componentes/Rodape.js';
 
 function App() {
  return (
   <BrowserRouter>
-   <div className="App ">
+   <div className="App flex flex-col min-h-screen">
     <Nav />
-    <Routes>
-     <Route path="/" element={<Home />} />
-     <Route path="/cadastro" element={<Cadastro />} />
-     <Route path="/adoteumamigo" element={<Adote />} />
 
+    <div className='flex  flex-grow '>
+     <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/cadastro" element={<Cadastro />} />
+      <Route path="/adoteumamigo" element={<Adote />} />
+     </Routes>
+    </div>
 
-    </Routes>
+    <Rodape />
    </div>
 
   </BrowserRouter>

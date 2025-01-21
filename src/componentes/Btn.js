@@ -1,9 +1,37 @@
-function Btn({ text, className }) {
- // If className is not passed, it will be an empty string
+import React, { useState } from "react";
+import "./Btn.css";
+
+function Btn({ text, className, iconeHeart, onClick }) {
+
  className = className ? className : "";
- // Return a button with the text and className passed as props
+
+ const [isHeartSolid, setIsHeartSolid] = useState(false);
+
+ const handleClick = () => {
+  setIsHeartSolid(!isHeartSolid);
+  if (onClick) {
+   onClick();
+  }
+
+ };
+
+ const buttonText = isHeartSolid ? "Adotei " : "Adotar ";
+
+ const bgColor = buttonText === "Adotei " ? "bg-azul-escuro" : "bg-verde";
+
  return (
-  <input type="submit" value={text} className={className} />
+  <button className={`flex items-center ${className} ${bgColor}`}
+   onClick={handleClick}>
+   {iconeHeart && (
+    <ion-icon
+     name={isHeartSolid ? "heart" : "heart-outline"}
+     className="mr-2"
+    ></ion-icon>
+   )}
+
+   {text ? text : buttonText}
+  </button>
+
  );
 }
 

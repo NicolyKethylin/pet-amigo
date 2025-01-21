@@ -1,5 +1,15 @@
-import Btn from './Btn'
+import { useState } from 'react';
+import Btn from './Btn';
+
+
 export const Card = ({ namePet, descrPet, portPet, especiePet }) => {
+ const [buttonText, setButtonText] = useState("Adotar");
+
+ const handleButtonClick = () => {
+  setButtonText(buttonText === "Adotar" ? "Adotei" : "Adotar");
+ };
+
+
  return (
   <div>
    <div className="card">
@@ -10,7 +20,13 @@ export const Card = ({ namePet, descrPet, portPet, especiePet }) => {
      <p>Porte: {portPet}</p>
      <p>Especie:{especiePet}</p>
     </div>
-    <Btn text="Adotar" className={"cursor-pointer bg-roxo text-branco p"} />
+    <Btn
+     text={buttonText}
+     className="cursor-pointer text-branco py-5 px-9 rounded ${bgColor}"
+
+     iconeHeart={true}
+     onClick={handleButtonClick}
+    />
    </div>
   </div>
 
